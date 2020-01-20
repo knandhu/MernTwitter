@@ -89,7 +89,7 @@ router.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  User.findOne({ email }).then(user => {
+    User.findOne({ email }).then(user => {
     if (!user) {
       // Use the validations to send the error
     //   errors.email = "User not found";
