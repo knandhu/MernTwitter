@@ -34,9 +34,9 @@ app.use("/api/tweets", tweets);
 
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("public"));
+  app.use(express.static("frontend/public"));
   app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "public", "index.html"));
+    res.sendFile(path.resolve(__dirname, "frontend", "public", "index.html"));
   });
 }
 
