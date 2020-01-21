@@ -17,7 +17,7 @@ app.use(
 
 app.use(bodyParser.json());
 app.use(passport.initialize());
-
+require("./config/passport")(passport);
 
 const users = require("./routes/api/users");
 const tweets = require("./routes/api/tweets");
@@ -26,7 +26,7 @@ const tweets = require("./routes/api/tweets");
 app.use("/api/users", users);
 app.use("/api/tweets", tweets);
 
-// require("./config/passport")(passport);
+
 
 
 
